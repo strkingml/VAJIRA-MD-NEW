@@ -1,0 +1,17 @@
+FROM node:Its+buster
+
+RUN apt get update && \
+   apt-get install-y \
+   ffmpeg \
+   Imagemagick \
+   webp && \
+   apt -get upgrade-g && \
+   rm \rf /var/lib/apt/lists/*
+
+COPY package.Json
+
+RUN npm install
+
+COPY
+
+CMD [''node", ''."]
